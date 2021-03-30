@@ -46,6 +46,9 @@ app.use(function (req, res, next) {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/revive', async (req, res) => {
+    res.send('success')
+})
 
 app.get('/seed/:address/:txnhash', async (req, res) => {
 
